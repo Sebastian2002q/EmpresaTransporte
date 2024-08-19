@@ -51,4 +51,37 @@ public class EmpresaTransporte {
     public void setListUsuarios(ArrayList<Usuario> listUsuarios) {
         this.listUsuarios = listUsuarios;
     }
+
+    /**
+     * Obtiene la lista de usuarios transportados por vehiculo de transporte a traves del numero de placa
+     *
+     * @param {String} placa
+     * @returns {List} - lista de usuarios
+     */
+    public ArrayList<Usuario> UsuariosPorPlaca(String placa) {
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        for (Vehiculo vehiculo : listVehiculosTransporte) {
+            if (vehiculo.getPlaca().equals(placa)) {
+                usuarios = ((VehiculoTransporte)vehiculo).getListUsuariosAsociados();
+            }
+        }
+        return usuarios;
+    }
+
+    /**
+     * Obtiene la cantidad de usuarios en un rango de edad dado
+     *
+     * @param {int} rangoSup, rangoInf
+     * @returns {int} - contador de usuarios dentro del rango
+     */
+    public int UsuariosRangoEdad(int rangoSup, int rangoInf){
+        int numUsuarios = 0;
+        for (Usuario usuario : listUsuarios) {
+            if(Integer.parseInt(usuario.getEdad()) >= rangoInf && Integer.parseInt(usuario.getEdad()) <= rangoSup){
+                numUsuarios++;
+            }
+        }
+        return numUsuarios;
+    }
+
 }
