@@ -1,26 +1,28 @@
 package co.edu.uniquindio;
 
-import java.util.ArrayList;
-
 public class VehiculoCarga extends Vehiculo{
-    private int maxPasajeros;
-    private final ArrayList<Usuario> listUsuariosAsociados;
+    private double capacidadCarga;
+    private int numeroEjes;
 
-    public VehiculoCarga(String placa, String marca, String modelo, String color, Propietario propietarioAsociado, int maxPasajeros) {
+    public VehiculoCarga(String placa, String marca, String modelo, String color, Propietario propietarioAsociado, double capacidadCarga, int numeroEjes) {
         super(placa, marca, modelo, color, propietarioAsociado);
-        this.maxPasajeros = maxPasajeros;
-        this.listUsuariosAsociados = new ArrayList<>();
+        this.capacidadCarga = capacidadCarga;
+        this.numeroEjes = numeroEjes;
     }
 
-    public void registrarUsuario(Usuario usuario){
-        listUsuariosAsociados.add(usuario);
+    public double getCapacidadCarga() {
+        return capacidadCarga;
     }
 
-    public int getMaxPasajeros() {
-        return maxPasajeros;
+    public void setCapacidadCarga(double capacidadCarga) {
+        this.capacidadCarga = capacidadCarga;
     }
 
-    public void setMaxPasajeros(int maxPasajeros) {
-        this.maxPasajeros = maxPasajeros;
+    public int getNumeroEjes() {
+        return numeroEjes;
+    }
+
+    public void setNumeroEjes(int numeroEjes) {
+        this.numeroEjes = numeroEjes;
     }
 }
