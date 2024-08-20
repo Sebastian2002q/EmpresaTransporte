@@ -4,7 +4,7 @@ public class Usuario {
     private String nombre;
     private String edad;
     private VehiculoTransporte vehiculoAsociado;
-    private Double peso;
+    private double peso;
 
     public Usuario(String nombre, String edad, Double peso) {
         this.nombre = nombre;
@@ -30,7 +30,7 @@ public class Usuario {
         this.edad = edad;
     }
 
-    public Double getPeso() { return peso;}
+    public double getPeso() { return peso;}
 
     public void setPeso(Double peso) {this.peso = peso;}
 
