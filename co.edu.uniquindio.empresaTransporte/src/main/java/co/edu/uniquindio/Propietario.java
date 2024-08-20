@@ -7,6 +7,7 @@ public class Propietario {
     private String cedula;
     private String celular;
     private String email;
+    private int Edad;
     private ArrayList<Vehiculo> vehiculos;
     private Vehiculo vehiculoAsociado;
 
@@ -15,6 +16,7 @@ public class Propietario {
         this.cedula = cedula;
         this.celular = celular;
         this.email = email;
+        this.edad = edad;
         this.vehiculos = new ArrayList();
     }
 
@@ -51,4 +53,8 @@ public class Propietario {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public int getEdad() { return edad;}
+
+    public void setEdad(int edad) { this.edad = edad;}
 }

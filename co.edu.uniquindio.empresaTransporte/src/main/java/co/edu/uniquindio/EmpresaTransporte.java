@@ -84,4 +84,34 @@ public class EmpresaTransporte {
         return numUsuarios;
     }
 
+    /**
+     * Filtra los usuarios que superan el peso suministrado como parámetro
+     *
+     * @param {Usuario} usuario
+     * @param {double} peso
+     * @return {List<Usuario>} - lista de usuarios filtrados según el criterio
+     */
+    public ArrayList<Usuario> UsuariosPeso(Usuario usuario, double peso) {
+        List<Usuario> usuariosFiltrados = new ArrayList<>();
+        for (Usuario usuario : listUsuarios) {
+            if (usuario.getPeso() > peso) {
+                usuariosFiltrados.add(usuario)
+            }
+        }
+        return usuariosFiltrados;
+    }
+
+    /**
+     * Obtiene el número de propietarios mayores a 40 años
+     *
+     * @return {int} - contador
+     */
+    public int numPropietariosMayoresCuarentaAnios() {
+        int contador = 0;
+        for (Propietario propietario : listPropietarios){
+            if (propietario.getEdad() > 40);
+            contador++;
+        }
+        return contador;
+    }
 }

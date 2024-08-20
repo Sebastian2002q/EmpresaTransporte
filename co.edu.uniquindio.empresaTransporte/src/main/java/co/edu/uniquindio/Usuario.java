@@ -33,4 +33,8 @@ public class Usuario {
     public Double getPeso() { return peso;}
 
     public void setPeso(Double peso) {this.peso = peso;}
+
+    public VehiculoTransporte getVehiculoAsociado() {
+        return vehiculoAsociado;
+    }
 }
