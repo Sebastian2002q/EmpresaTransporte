@@ -12,7 +12,7 @@ public class Usuario {
         this.peso = peso;
     }
 
-    public Usuario(){}
+    //public Usuario(){}
 
     public String getNombre() {
         return nombre;
@@ -36,5 +36,14 @@ public class Usuario {
 
     public VehiculoTransporte getVehiculoAsociado() {
         return vehiculoAsociado;
+    }
+
+    public void setVehiculoAsociado(VehiculoTransporte vehiculoAsociado) {
+        this.vehiculoAsociado=vehiculoAsociado;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 }

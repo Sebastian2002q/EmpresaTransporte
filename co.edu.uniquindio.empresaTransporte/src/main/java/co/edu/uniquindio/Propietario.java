@@ -20,7 +20,7 @@ public class Propietario {
         this.vehiculos = new ArrayList();
     }
 
-    //public Propietario() {}
+    public Propietario() {}
 
     public String getNombre() {
         return nombre;
@@ -57,4 +57,16 @@ public class Propietario {
     public int getEdad() { return edad;}
 
     public void setEdad(int edad) { this.edad = edad;}
+
+    public void asociarVehiculo (Vehiculo vehiculoAsociado) {
+        if (this.vehiculoAsociado == null) {
+            this.vehiculoAsociado = vehiculoAsociado;
+        } else {
+            vehiculos.add(vehiculoAsociado);
+        }
+    }
+
+    public Vehiculo getVehiculoAsociado() {
+        return vehiculoAsociado;
+    }
 }

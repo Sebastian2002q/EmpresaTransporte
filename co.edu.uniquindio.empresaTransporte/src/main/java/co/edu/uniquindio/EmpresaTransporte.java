@@ -1,7 +1,6 @@
 package co.edu.uniquindio;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class EmpresaTransporte {
     private ArrayList<Propietario> listPropietarios;
@@ -9,17 +8,44 @@ public class EmpresaTransporte {
     private ArrayList<Vehiculo> listVehiculosCarga;
     private ArrayList<Usuario> listUsuarios;
 
-    public EmpresaTransporte(ArrayList<Propietario> listPropietarios,
-                             ArrayList<Vehiculo> listVehiculosTransporte,
-                             ArrayList<Vehiculo> listVehiculosCarga,
-                             ArrayList<Usuario> listUsuarios) {
-        this.listPropietarios = listPropietarios;
-        this.listVehiculosTransporte = listVehiculosTransporte;
-        this.listVehiculosCarga = listVehiculosCarga;
-        this.listUsuarios = listUsuarios;
+    public EmpresaTransporte() {
+        this.listPropietarios = new ArrayList<>();
+        this.listVehiculosTransporte = new ArrayList<>();
+        this.listVehiculosCarga = new ArrayList<>();
+        this.listUsuarios = new ArrayList<>();
     }
 
-    public EmpresaTransporte() {}
+    public void registrarPropietario(Propietario propietario) {
+        listPropietarios.add(propietario);
+    }
+
+    public void eliminarPropietario(Propietario propietario) {
+        listPropietarios.remove(propietario);
+    }
+
+    public void registrarVehiculoTransporte(Vehiculo vehiculo) {
+        listVehiculosTransporte.add(vehiculo);
+    }
+
+    public void eliminarVehiculoTransporte(Vehiculo vehiculo) {
+        listVehiculosTransporte.remove(vehiculo);
+    }
+
+    public void registrarVehiculoCarga(Vehiculo vehiculo) {
+        listVehiculosCarga.add(vehiculo);
+    }
+
+    public void eliminarVehiculoCarga(Vehiculo vehiculo) {
+        listVehiculosCarga.remove(vehiculo);
+    }
+
+    public void registrarUsuario(Usuario usuario) {
+        listUsuarios.add(usuario);
+    }
+
+    public void eliminarUsuario(Usuario usuario) {
+        listUsuarios.remove(usuario);
+    }
 
     public ArrayList<Vehiculo> getListVehiculosTransporte() {
         return listVehiculosTransporte;

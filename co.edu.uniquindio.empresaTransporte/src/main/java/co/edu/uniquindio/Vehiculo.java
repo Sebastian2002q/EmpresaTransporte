@@ -53,4 +53,9 @@ public abstract class Vehiculo {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Paca= " + placa + ", Marca=  " + marca + ", Modelo= " + modelo + ", Color= " + color;
+    }
 }

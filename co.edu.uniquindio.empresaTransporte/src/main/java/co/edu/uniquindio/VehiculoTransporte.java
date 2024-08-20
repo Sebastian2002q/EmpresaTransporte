@@ -27,4 +27,5 @@ public class VehiculoTransporte extends Vehiculo{
     public void setMaxPasajeros(int maxPasajeros) {
         this.maxPasajeros = maxPasajeros;
     }
+
 }
