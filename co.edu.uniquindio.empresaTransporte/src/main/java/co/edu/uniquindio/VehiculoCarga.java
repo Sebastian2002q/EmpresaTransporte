@@ -4,8 +4,8 @@ public class VehiculoCarga extends Vehiculo{
     private double capacidadCarga;
     private int numeroEjes;
 
-    public VehiculoCarga(String placa, String marca, String modelo, String color, Propietario propietarioAsociado, double capacidadCarga, int numeroEjes) {
-        super(placa, marca, modelo, color, propietarioAsociado);
+    public VehiculoCarga(String placa, String marca, String modelo, String color, double capacidadCarga, int numeroEjes) {
+        super(placa, marca, modelo, color);
         this.capacidadCarga = capacidadCarga;
         this.numeroEjes = numeroEjes;
     }

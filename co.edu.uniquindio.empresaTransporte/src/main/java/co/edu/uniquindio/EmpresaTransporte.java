@@ -1,6 +1,7 @@
 package co.edu.uniquindio;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EmpresaTransporte {
     private ArrayList<Propietario> listPropietarios;
@@ -53,16 +54,18 @@ public class EmpresaTransporte {
     }
 
     /**
-     * Obtiene la lista de usuarios transportados por vehiculo de transporte a traves del numero de placa
+     * Obtiene el numero de usuarios transportados por vehiculo de transporte a traves del numero de placa
      *
      * @param {String} placa
-     * @returns {List} - lista de usuarios
+     * @returns {int} - numero de usuarios
      */
-    public ArrayList<Usuario> UsuariosPorPlaca(String placa) {
-        ArrayList<Usuario> usuarios = new ArrayList<>();
+    public int UsuariosPorPlaca(String placa) {
+        int usuarios = 0;
         for (Vehiculo vehiculo : listVehiculosTransporte) {
             if (vehiculo.getPlaca().equals(placa)) {
-                usuarios = ((VehiculoTransporte)vehiculo).getListUsuariosAsociados();
+                for (Usuario usuario : ((VehiculoTransporte)vehiculo).getListUsuariosAsociados()) {
+                    usuarios++;
+                }
             }
         }
         return usuarios;
@@ -91,11 +94,11 @@ public class EmpresaTransporte {
      * @param {double} peso
      * @return {List<Usuario>} - lista de usuarios filtrados según el criterio
      */
-    public ArrayList<Usuario> UsuariosPeso(Usuario usuario, double peso) {
-        List<Usuario> usuariosFiltrados = new ArrayList<>();
+    public ArrayList<Usuario> UsuariosPeso(double peso) {
+        ArrayList<Usuario> usuariosFiltrados = new ArrayList<>();
         for (Usuario usuario : listUsuarios) {
             if (usuario.getPeso() > peso) {
-                usuariosFiltrados.add(usuario)
+                usuariosFiltrados.add(usuario);
             }
         }
         return usuariosFiltrados;
@@ -109,8 +112,9 @@ public class EmpresaTransporte {
     public int numPropietariosMayoresCuarentaAnios() {
         int contador = 0;
         for (Propietario propietario : listPropietarios){
-            if (propietario.getEdad() > 40);
-            contador++;
+            if (propietario.getEdad() > 40){
+                contador++;
+            }
         }
         return contador;
     }

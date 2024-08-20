@@ -6,8 +6,8 @@ public class VehiculoTransporte extends Vehiculo{
     private int maxPasajeros;
     private final ArrayList<Usuario> listUsuariosAsociados;
 
-    public VehiculoTransporte(String placa, String marca, String modelo, String color, Propietario propietarioAsociado, int maxPasajeros) {
-        super(placa, marca, modelo, color, propietarioAsociado);
+    public VehiculoTransporte(String placa, String marca, String modelo, String color, int maxPasajeros) {
+        super(placa, marca, modelo, color);
         this.maxPasajeros = maxPasajeros;
         this.listUsuariosAsociados = new ArrayList<>();
     }

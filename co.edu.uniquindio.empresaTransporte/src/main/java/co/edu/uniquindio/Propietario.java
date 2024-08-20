@@ -7,11 +7,11 @@ public class Propietario {
     private String cedula;
     private String celular;
     private String email;
-    private int Edad;
+    private int edad;
     private ArrayList<Vehiculo> vehiculos;
     private Vehiculo vehiculoAsociado;
 
-    public Propietario(String nombre, String cedula, String celular, String email) {
+    public Propietario(String nombre, String cedula, String celular, String email,int edad) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.celular = celular;
@@ -20,7 +20,7 @@ public class Propietario {
         this.vehiculos = new ArrayList();
     }
 
-    public Propietario() {}
+    //public Propietario() {}
 
     public String getNombre() {
         return nombre;

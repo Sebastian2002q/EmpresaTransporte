@@ -10,17 +10,20 @@ public abstract class Vehiculo {
     private Propietario propietarioAsociado;
     private ArrayList<Propietario> listPropietariosAsociados;
 
-    public Vehiculo(String placa, String marca, String modelo, String color, Propietario propietarioAsociado) {
+    public Vehiculo(String placa, String marca, String modelo, String color) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
-        this.propietarioAsociado = propietarioAsociado;
         this.listPropietariosAsociados = new ArrayList<>();
     }
 
     public String getPlaca() {
         return placa;
+    }
+
+    public void registrarPropietarioAsociado(Propietario propietario) {
+        this.propietarioAsociado = propietario;
     }
 
     public void setPlaca(String placa) {
