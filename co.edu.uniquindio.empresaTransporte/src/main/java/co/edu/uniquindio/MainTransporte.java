@@ -1,7 +1,6 @@
 package co.edu.uniquindio;
 
 import javax.swing.*;
-import java.util.ArrayList;
 
 import static javax.swing.JOptionPane.showInputDialog;
 import static javax.swing.JOptionPane.showMessageDialog;
