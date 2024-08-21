@@ -41,14 +41,10 @@ public class MainTransporte {
         radioTaxi.registrarUsuario(usuario1);
         radioTaxi.registrarUsuario(usuario2);
         radioTaxi.registrarUsuario(usuario3);
-        ((VehiculoTransporte)vehiculo).registrarUsuario(usuario0);
-        ((VehiculoTransporte)vehiculo).registrarUsuario(usuario1);
-        ((VehiculoTransporte)vehiculo).registrarUsuario(usuario3);
         radioTaxi.registrarPropietario(propietario);
         radioTaxi.registrarPropietario(propietario1);
         radioTaxi.registrarPropietario(propietario2);
         radioTaxi.registrarPropietario(propietario3);
-        radioTaxi.registrarUsuario(usuario);
         radioTaxi.registrarVehiculoTransporte(vehiculo);
         radioTaxi.registrarVehiculoCarga(vehiculo2);
         return radioTaxi;

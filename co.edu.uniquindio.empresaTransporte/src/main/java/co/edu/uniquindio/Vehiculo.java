@@ -56,6 +56,6 @@ public abstract class Vehiculo {
 
     @Override
     public String toString() {
-        return "Paca= " + placa + ", Marca=  " + marca + ", Modelo= " + modelo + ", Color= " + color;
+        return "Placa= " + placa + ", Marca=  " + marca + ", Modelo= " + modelo + ", Color= " + color;
     }
 }
